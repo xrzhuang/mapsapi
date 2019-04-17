@@ -1,4 +1,4 @@
-# CS52 Workshops:  TITLE OF YOUR WORKSHOP
+# CS52 Workshops:  MAP APIS: Google Maps, Leaflet and Mapbox
 
 ![](http://i.giphy.com/eUh8NINbZf9Ys.gif)
 
