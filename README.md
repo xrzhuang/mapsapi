@@ -1,6 +1,6 @@
-# CS52 Workshops:  MAP APIS: Google Maps, Leaflet and Mapbox
+# CS52 Workshops:  Map APIS: Google Maps, Leaflet and Mapbox
 
-![](http://i.giphy.com/eUh8NINbZf9Ys.gif)
+![](./img/lookingMap.gif)
 
 Brief motivation here as well as in presentation
 
@@ -34,10 +34,15 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 ## Summary / What you Learned
 
 * [ ] can be checkboxes
+* [ ] can be checkboxes
+* [ ] can be checkboxes
+* [ ] can be checkboxes
+* [ ] can be checkboxes
+
 
 ## Reflection
 
-*2 questions for the workshop participants to answer (very short answer) when they submit the workshop. These should try to get at something core to the workshop, the what and the why.*
+Remember to answer these reflection questions and submit them on canvas!
 
 * [ ] 2 reflection questions
 * [ ] 2 reflection questions
@@ -45,4 +50,9 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 
 ## Resources
 
-* cite any resources
+* https://developers.google.com/maps/documentation/
+* https://trends.builtwith.com/websitelist/Google-Maps-API
+* https://www.datanyze.com/market-share/mapping-and-gis/United%20States/google-maps-api-market-share
+* https://jungleworks.com/google-vs-mapbox/
+* https://leafletjs.com/
+* https://www.mapbox.com/
