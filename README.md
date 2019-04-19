@@ -10,15 +10,15 @@ We're going to be writing a react component that utilizes the Google Maps API. F
 
 ## Setup
 
-Clone the workshop repository and then run /*and use code blocks for any code!*/. We need to install all the dependencies from the package.json file. Then run /*yarn start*/ to make sure everything's looking good :sunglasses:
+Clone the workshop repository and then run `yarn install`. We need to install all the dependencies from the package.json file. Then run `yarn start` to make sure everything's looking good :sunglasses:
 
-The next step is to install the google maps react library so we can use google maps within our react app! We do this by running /*yarn add google-maps-react*/
+The next step is to install the google maps react library so we can use google maps within our react app! We do this by running `yarn add google-maps-react`
 
 Since we're using an API, we need to fetch an API key, just like we did for the Youtube API in Short Assignment 4. To do this you should head to http://console.developers.google.com
 
 1. Select **Credentials** on the lefthand, invisable menu and you should see a screen like this.
 
-![](./img/credentials.jpg)
+![](./img/credentials.png)
 
 2. Go ahead and copy the API because we'll need it in a bit (it's the same one you used for the Youtube API! Google is everywhere :scream:)
 
