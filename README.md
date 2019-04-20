@@ -2,11 +2,11 @@
 
 ![](./img/lookingMap.gif)
 
-Maps are everywhere :rainbow: We'd be lost without the maps on our phone, and apps from Uber to Snapchat wouldn't work without the capabilities of these APIs. Map APIs can give routing and time estimation, produce cool data visualizations and construct augmented reality. The best part is, it's pretty easy for us to take advantage of all their cool features too :smiley_cat: ** more pros ** 
+Maps are everywhere :rainbow: We'd be lost without the maps on our phone, and apps from Uber to Snapchat wouldn't work without the capabilities of these APIs. Map APIs give us data we couldn't get otherwise like routing and time estimation, produce cool data visualizations and construct augmented reality. The best part is, it's pretty easy for us to take advantage of all their cool features too :smiley_cat:
 
 ## Overview
 
-We're going to be writing a react component that utilizes the Google Maps API. First, we're going to learn how to add a map to a react component. Then, we're going to drop personalized points on our map. Next, we're going to create a heat map data visualization based on our points!
+For this demo, we're going to be writing a react component that utilizes the Google Maps API. First, we're going to learn how to add a map to a react component. Then, we're going to drop personalized points on our map. Next, we're going to create a heat map data visualization based on our points!
 
 ## Setup
 
@@ -21,7 +21,6 @@ Since we're using an API, we need to fetch an API key, just like we did for the 
 ![](./img/credentials.png)
 
 2. Go ahead and copy the API because we'll need it in a bit (it's the same one you used for the Youtube API! Google is everywhere :scream:)
-
 
 ## Step by Step
 
@@ -55,7 +54,7 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 
 * [ ] What an API is and what map APIs are capable of
 * [ ] The pros and cons of the different map API options (Leaflet, Mapbox, Google Maps)
-* [ ] How to get an API key for Google Maps and throw a map up on your site
+* [ ] How to get an API key for Google Maps and throw a map up on your site using React
 * [ ] Leveraging a data set to produce cool data visualtions with the Google Maps API
 * [ ] Styling your map to be your own!
 
