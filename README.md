@@ -53,16 +53,16 @@ Time to start coding! `cd src` and open up `App.js`. This is the main component 
 Let's start out by getting a basic Google Map to load on the screen, and then we'll start adding features. **google react maps** already has a component called Map that we'll be using to load our map. We need to import the Map component from **google react maps**. At the top of your App.js add:
 
 ```javascript
-/* import { Map, GoogleApiWrapper } from 'google-maps-react'; */
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 ```
 
 Now we're going to render our Map component. In your render method, under the H1 tag, add:
 
 ```javascript
-/*  <Map 
-        google={this.props.google}
-    > 
-    </Map> 
+<Map 
+    google={this.props.google}
+> 
+</Map> 
 */
 ```
 
