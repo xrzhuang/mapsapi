@@ -249,7 +249,11 @@ Look at your page! You should see something like this:
 
 You just made your own React App that includes the Google Maps API with some cool customization and data visualization. 
 
-![](https://gph.is/2bcGfQj)
+![](https://giphy.com/gifs/party-the-office-hard-l0MYt5jPR6QX5pnqM)
+
+LAST PART! Let's deploy! 
+
+Because of our starter, we're going to have to deploy in a bit of a different way. First let's do 
 
 ### Extra Credit
 
