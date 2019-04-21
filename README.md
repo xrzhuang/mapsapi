@@ -14,7 +14,7 @@ Clone the workshop repository and `cd workshop-ws-04-23-maps`. Then run `yarn in
 
 :rocket: We're using a different "starter-pack." This one is called **create react app** and it's used by front end developers to quickly create a complete react development environemnt. Though our starter pack is great, this one has a few more things we're going to need.
 
-The next step is to install the google maps react library so we can use google maps within our react app! We do this by running `yarn add google-maps-react`
+The next step is to install the google maps react library so we can use google maps within our react app! This is a wrapper that uses the Google Maps API and it makes it compatable with react projects. We do this by running `yarn add google-maps-react`
 
 Since we're using an API, we need to fetch an API key, just like we did for the Youtube API in Short Assignment 4. To do this you should head to http://console.developers.google.com
 
@@ -38,7 +38,9 @@ Since we're using an API, we need to fetch an API key, just like we did for the 
 
 ## Step by Step
 
-Now that everything's set up, we're going to start adding to our application. Throughout building you can run `yarn start` to see your changes come to life!
+Now that everything's set up, we're going to start adding to our application. Throughout building you can run `yarn start` to see your changes in real time!
+
+
 
 * Explanations of the what **and** the why behind each step. Try to include:
   * higher level concepts
@@ -64,8 +66,8 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 * [ ] At least one marker of a point of your choosing, with a custom info box
 * [ ] A list of points that will become the outline for your custom shape
 * [ ] A shape whose points are those you selected in the list above
-* [ ] EC: Your graph centers around somewhere that isn't Dartmouth
-* [ ] EC: Style your map to make it your own :sunglasses:
+
+**Extra Credit** Your graph centers around somewhere that isn't Dartmouth and/or style your map to make it your own :sunglasses:
 
 **What you learned:**
 
