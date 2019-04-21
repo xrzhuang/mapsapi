@@ -10,9 +10,10 @@ const mapStyles = {
 export class MapContainer extends Component {
   render() {
     return (
-      <h1>Hello Google Maps</h1>
-    )
-    
+      <div>
+        <h1>Hello Google Maps</h1>
+      </div>
+    ) 
   }
 }
 
