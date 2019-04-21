@@ -1,6 +1,6 @@
-# Google Maps API Completed Demo
+# Google Maps API Demo
 
-This repo contains the solution to ur Google Maps API Demo. We used surge to deploy this site and give it as an example, so the class knows what the end goal of our demo is.
+![](https://media.giphy.com/media/d2jjuAZzDSVLZ5kI/giphy.gif)
 
 Maps are everywhere :rainbow: We'd be lost without the maps on our phone, and apps from Uber to Snapchat wouldn't work without the capabilities of these APIs. Map APIs give us data we couldn't get otherwise like routing and time estimation, produce cool data visualizations and construct augmented reality. The best part is, it's pretty easy for us to take advantage of all their cool features too :smiley_cat:
 
@@ -254,6 +254,16 @@ You just made your own React App that includes the Google Maps API with some coo
 LAST PART! Let's deploy! 
 
 Because of our starter, we're going to have to deploy in a bit of a different way. First let's do 
+
+`yarn add surge` 
+
+You should be in the root directory of your project, **workshop-ws-04-23-maps**. Next run
+
+`yarn run build` 
+
+This creates a build folder, which contains all the production code you need to deploy your project. Then, cd into the `build` directory.
+
+Now, just run `surge`! And you're done! 
 
 ### Extra Credit
 
