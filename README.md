@@ -6,23 +6,33 @@ Maps are everywhere :rainbow: We'd be lost without the maps on our phone, and ap
 
 ## Overview
 
-For this demo, we're going to be writing a react component that utilizes the Google Maps API. First, we're going to learn how to add a map to a react component. Then, we're going to drop personalized points on our map. Next, we're going to create a heat map data visualization based on our points!
+For this demo, we're going to be writing a react app that utilizes the Google Maps API. First, we're going to learn how to loading a map to a react project. Then, we'll center and zoom in on Dartmouth. Next, we're going to drop markers, with personalized info boxes on our map. Lastly, we're going to create a shape data visualization based on our points! 
 
 ## Setup
 
-Clone the workshop repository and then run `yarn install`. We need to install all the dependencies from the package.json file. Then run `yarn start` to make sure everything's looking good :sunglasses:
+Clone the workshop repository and `cd workshop-ws-04-23-maps`. Then run `yarn install`. We need to install all the dependencies from the package.json file. Then run `yarn start` to make sure everything's looking good :sunglasses: 
+
+:rocket: We're using a different "starter-pack." This one is called **create react app** and it's used by front end developers to quickly create a complete react development environemnt. Though our starter pack is great, this one has a few more things we're going to need.
 
 The next step is to install the google maps react library so we can use google maps within our react app! We do this by running `yarn add google-maps-react`
 
 Since we're using an API, we need to fetch an API key, just like we did for the Youtube API in Short Assignment 4. To do this you should head to http://console.developers.google.com
 
-1. Select **Credentials** on the lefthand, invisable menu and you should see a screen like this.
+1. Select **Library** on the lefthand, invisable menu and you should see a screen like this:
 
-![](./img/credentials.png)
+![](./img/library.png)
 
-2. Go ahead and copy the API because we'll need it in a bit (it's the same one you used for the Youtube API! Google is everywhere :scream:)
+2. Next, search for "Google Maps JavaScript API" it should look like this:
+
+![](./img/whichAPI.png)
+
+3. blah
+
+4. blah
 
 ## Step by Step
+
+Now that everything's set up, we're going to start adding to our application. Throughout building you can run `yarn start` to see your changes come to life!
 
 * Explanations of the what **and** the why behind each step. Try to include:
   * higher level concepts
@@ -44,11 +54,12 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 
 **What your site has:**
 
-* [ ] 
-* [ ] 
-* [ ] 
-* [ ] 
-* [ ] 
+* [ ] A map, that is centered around a certain point and zoomed in to a level you like
+* [ ] At least one marker of a point of your choosing, with a custom info box
+* [ ] A list of points that will become the outline for your custom shape
+* [ ] A shape whose points are those you selected in the list above
+* [ ] EC: Your graph centers around somewhere that isn't Dartmouth
+* [ ] EC: Style your map to make it your own :sunglasses:
 
 **What you learned:**
 
