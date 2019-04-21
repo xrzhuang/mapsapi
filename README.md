@@ -1,6 +1,6 @@
-# CS52 Workshops:  Map APIs: Google Maps, Leaflet and Mapbox
+# Google Maps API Completed Demo
 
-![](./img/lookingMap.gif)
+This repo contains the solution to ur Google Maps API Demo. We used surge to deploy this site and give it as an example, so the class knows what the end goal of our demo is.
 
 Maps are everywhere :rainbow: We'd be lost without the maps on our phone, and apps from Uber to Snapchat wouldn't work without the capabilities of these APIs. Map APIs give us data we couldn't get otherwise like routing and time estimation, produce cool data visualizations and construct augmented reality. The best part is, it's pretty easy for us to take advantage of all their cool features too :smiley_cat:
 
