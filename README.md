@@ -22,13 +22,19 @@ Since we're using an API, we need to fetch an API key, just like we did for the 
 
 ![](./img/library.png)
 
-2. Next, search for "Google Maps JavaScript API" it should look like this:
+2. Next, search for "Google Maps JavaScript API" it should look like this and then click on it:
 
 ![](./img/whichAPI.png)
 
-3. blah
+3. Once you've clicked on the "Google Maps JavaScript API" click enable to enable that API
 
-4. blah
+![](./img/enable.png)
+
+4. You'll be taken to a screen that looks something like this. Because we all have google projects from SA 4, we don't need to make a new one. Click on **Credentials** and your API key should be listed! 
+
+![](./img/getCredential.png)
+
+:warning: Copy your API key because you're going to need it soon!
 
 ## Step by Step
 
@@ -65,7 +71,7 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 
 * [ ] What an API is and what map APIs are capable of
 * [ ] The pros and cons of the different map API options (Leaflet, Mapbox, Google Maps)
-* [ ] How to get an API key for Google Maps and throw a map up on your site using React
+* [ ] Adding a map to your React app and customizing the location, zoom and pins
 * [ ] Leveraging a data set to produce cool data visualtions with the Google Maps API
 * [ ] Styling your map to be your own!
 
@@ -73,7 +79,7 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 
 :bulb: Remember to submit these on canvas!
 
-* [ ] 2 reflection questions
+* [ ] Explain the basic idea of how these map APIs work.
 * [ ] Can you think of any instances where you would use a map API in a web or mobile app? For one of those examples, which API (Leaflet, Mapbox, Google Maps) would you choose and why?
 
 ## Resources
@@ -85,3 +91,7 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 * https://leafletjs.com/
 * https://www.mapbox.com/
 * https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/#the-map-container-component
+
+## Link to our Power Point
+
+https://docs.google.com/presentation/d/1kFYbvW4CdcYt7os8FXeKOqM1Vs_y9IbsqyPxfru8Y6E/edit?usp=sharing
