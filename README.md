@@ -62,8 +62,7 @@ Now we're going to render our Map component. In your render method, under the H1
 <Map 
     google={this.props.google}
 > 
-</Map> 
-*/
+</Map>
 ```
 
 google here is a prop of the Map component, 
@@ -79,16 +78,16 @@ Boston's cool but let's center it in Hanover! To your Map component we're going 
 Right below `google={this.props.google}` add
 
 ```javascript
-/* initialCenter={{
+initialCenter={{
     lat: YOUR LATITUDE HERE,
     lng: YOUR LONGITUDE HERE
-    }} */
+}}
 ```
 
 Now your map should be centered where you wanted. Next, we're going to adjust the zoom to cover all the area you want to see. Right below `initial center={{...}}` add
 
 ```javascript
-/* zoom={16} */
+zoom={16}
 ```
 
 We like the zoom set at 16, but feel free to change it. 
@@ -100,9 +99,9 @@ In this library, Markers and InfoWindows are their own components. To use them, 
 Within your Map component, we're going to add a Marker Component, so it'll be the child of `<Map />`. Add the code bellow inbetween the Map tags.
 
 ```javascript
-/*  <Marker
-        name={'This is a marker we just made yay!'}
-    /> */
+<Marker
+    name={'This is a marker we just made yay!'}
+/>
 ```
 
 You should see something like the picture below. The marker will drop automatically in the center of the map, but we can change this later.
@@ -114,9 +113,8 @@ Now, let's make it clickable with an InfoWindow that'll open up and give us a de
 After the Marker component, add 
 
 ```javascript
-/*  <InfoWindow>
-    </InfoWindow>
-*/
+<InfoWindow>
+</InfoWindow>
 ```
 
 It's empty :scream: Don't worry we'll add some event handlers that'll make it functional!
@@ -126,7 +124,7 @@ Before we start, we need to add State to our component. Before, it didn't really
 To do this, let's add a constructor and some state. Above your `render` function, add the code:
 
 ```javascript
-/* constructor(props) {
+constructor(props) {
     super(props);
     this.state = {
         showingInfoWindow: false, //Hides or the shows the infoWindow
@@ -134,7 +132,6 @@ To do this, let's add a constructor and some state. Above your `render` function
         selectedPlace: {} //Shows the infoWindow to the selected place upon a marker
     }; 
 } 
-*/
 ```
 
 We are keeping track of three things: `showInfoWindow` which is a boolean that will tell the component whether to render the infowindow or not, depending on if the marker is clicked, `activeMarker` which will keep track of the markers that are currently clicked and `selectedPlace` which will show the infowindow of the selected marker. 
@@ -144,43 +141,36 @@ Try clicking on the marker. It doesn't do anything! That's because we need to ad
 Underneath your constructor, add the event handler:
 
 ```javascript
-/* onMarkerClick = (props, marker, e) =>
-  this.setState({
-    selectedPlace: props,
-    activeMarker: marker,
-    showingInfoWindow: true
-  });
-*/
-```
-
-When the marker is clicked, this will change the state and activate the marker: the info window will pop up! You also need to add an onClick handler your Marker component. Add the code below to your Marker tag.
-
-```javascript
-/* 
-onClick={this.onMarkerClick}
-*/
-```
-
-We also need to define the onMarkerClick function for it to work *duh*. Insert this function below the constructor:
-
-```javascript
-/*
 onMarkerClick = (props, marker, e) =>
   this.setState({
     selectedPlace: props,
     activeMarker: marker,
     showingInfoWindow: true
-  });
-*/
+});
+```
+
+When the marker is clicked, this will change the state and activate the marker: the info window will pop up! You also need to add an onClick handler your Marker component. Add the code below to your Marker tag.
+
+```javascript
+onClick={this.onMarkerClick}
+```
+
+We also need to define the onMarkerClick function for it to work *duh*. Insert this function below the constructor:
+
+```javascript
+onMarkerClick = (props, marker, e) =>
+  this.setState({
+    selectedPlace: props,
+    activeMarker: marker,
+    showingInfoWindow: true
+});
 ```
 
 Uh oh! It still doesn't do anything when you click it. That's because we don't have an info window. Let's fix that. First let's add some content to our InfoWindow component. We need to connect our InfoWindow to our marker. In order to do this, we pass our InfoWindow component the following:
 
 ```javascript
-/* 
-    marker={this.state.activeMarker}
-    visible={this.state.showingInfoWindow}
-*/
+marker={this.state.activeMarker}
+visible={this.state.showingInfoWindow}
 ```
 
 This gives the InfoWindow component the Active Marker's name and tells it to show up!
@@ -188,34 +178,28 @@ This gives the InfoWindow component the Active Marker's name and tells it to sho
 In between the InfoWindow tags, add the code below to give it some content.
 
 ```javascript
-/* 
-    <div>
-        <h2>{this.state.selectedPlace.name}</h2>
-    </div>
-*/
+<div>
+    <h2>{this.state.selectedPlace.name}</h2>
+</div>
 ```
 
 YAY! Let's close it and go home, right? Wait, what did the marker say again? Oh no. We can't reopen the textbox! But, why? Why isn't this working? Well, thank you for asking, young grasshopper. It's because we don't have an on close handler. In the InfoWindow tag, add the following code under the marker and visible variables:
 
 ```javascript
-/* 
-    onClose={this.onClose}
-*/
+onClose={this.onClose}
 ```
 
 Again, we need to actually define the onClose function below the constructor to make this work:
 
 ```javascript
-/* 
-    onClose = props => {
+onClose = props => {
     if (this.state.showingInfoWindow) {
-      this.setState({
+        this.setState({
         showingInfoWindow: false,
         activeMarker: null
-      });
+        });
     }
-  };
-*/
+};
 ```
 
 Woohoo! :dancer: Now you should see something like this and be able to open and close it as many times as you want! Sick
@@ -231,14 +215,12 @@ At the top of your `render` function, add:
 
 
 ```javascript
-/* 
-    const triangleCoords = [
-      {lat: 43.7046, lng: -72.2943}, //thayer
-      {lat: 43.7034, lng: -72.2886}, //green
-      {lat: 43.7091, lng: -72.2839}, //LSC
-      {lat: 43.7046, lng: -72.2943} //thayer
-    ];
-*/
+const triangleCoords = [
+    {lat: 43.7046, lng: -72.2943}, //thayer
+    {lat: 43.7034, lng: -72.2886}, //green
+    {lat: 43.7091, lng: -72.2839}, //LSC
+    {lat: 43.7046, lng: -72.2943} //thayer
+];
 ```
 
 Can you see guess points we chose? It's pretty hard so let's actually map them.
@@ -250,16 +232,14 @@ Now let's add our Polygon component. It'll be another child of Map, so make sure
 Under InfoWindow add the code: 
 
 ```javascript
-/* 
-    <Polygon
-          paths={triangleCoords}
-          strokeColor="#0000FF"
-          strokeOpacity={0.8}
-          strokeWeight={2}
-          fillColor="#0000FF"
-          fillOpacity={0.35} 
-      />
-*/
+<Polygon
+    paths={triangleCoords}
+    strokeColor="#0000FF"
+    strokeOpacity={0.8}
+    strokeWeight={2}
+    fillColor="#0000FF"
+    fillOpacity={0.35} 
+/>
 ```
 WOAH! What is all that stuff? `paths` lets the polygon know which points we want to trace. The rest of the props will style our component. Feel free to switch these up however you want! 
 
@@ -278,11 +258,9 @@ Can make something more complex than a triangle? Let's add some more points into
 :alert: Where do you add the code below within the data set? This is a little tricky, but try it out! You may get something very funky. 
 
 ```javascript
-/* 
-    {lat: 43.7074, lng: -72.2911}, //choates
-    {lat: 43.7066, lng: -72.2968}, //ledyard
-    {lat: 43.7030, lng: -72.2841}, //gym
-*/
+{lat: 43.7074, lng: -72.2911}, //choates
+{lat: 43.7066, lng: -72.2968}, //ledyard
+{lat: 43.7030, lng: -72.2841}, //gym
 ```
 
 Feel free to find the latitutde and longitude of somewhere else and put that in if you want! This website makes it easy to find those values https://www.latlong.net/ Then, you can create your own shape within the new location you chose. 
