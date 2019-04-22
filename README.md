@@ -2,11 +2,11 @@
 
 ![](https://media.giphy.com/media/d2jjuAZzDSVLZ5kI/giphy.gif)
 
-Maps are everywhere :rainbow: We'd be lost without the maps on our phone, and apps from Uber to Snapchat wouldn't work without the capabilities of these APIs. Map APIs give us data we couldn't get otherwise like routing and time estimation, produce cool data visualizations and construct augmented reality. The best part is, it's pretty easy for us to take advantage of all their cool features too :smiley_cat:
+Maps are everywhere :rainbow: We'd be lost without the maps on our phone, and apps from Uber to Snapchat wouldn't work without the capabilities of these APIs. Map APIs give us data we couldn't get otherwise like routing and time estimation, and gives us the tools to produce cool data visualizations and construct augmented reality. The best part is, it's pretty easy for us to take advantage of all their cool features too :smiley_cat:
 
 ## Overview
 
-For this demo, we're going to be writing a react app that utilizes the Google Maps API. First, we're going to learn how to loading a map to a react project. Then, we'll center and zoom in on Dartmouth. Next, we're going to drop markers, with personalized info windows on our map. Lastly, we're going to create a shape data visualization based on our points! 
+For this demo, we're going to be writing a react app that utilizes the Google Maps API. First, we're going to learn how to load a map into a react project. Then, we'll center and zoom in on Dartmouth. Next, we're going to drop markers on our map, with personalized info windows. Lastly, we're going to create a simple shape data visualization based on some data points! 
 
 ## Setup
 
@@ -18,13 +18,11 @@ Our Yarn install includes something called **google maps react**. This is a Java
 
 Since we're using the Google Maps JavaScript API, we need to fetch an API key, just like we did for the Youtube API in Short Assignment 4. To do this you should head to http://console.developers.google.com
 
-There are two options, one works for some people and one for the other. So this may take two tries. First, try it this way:
-
 1. You should see a screen that looks like the one below. Click on `Personal Website` or whatever the name of you project is in the top bar.
 
 ![](./img/originalDashboard.png)
 
-2. After you click that you should see a page that looks like the one down here. You're going to click on `new project`. 
+2. After you click that you should see a page that looks like the one down here. You're going to click on `NEW PROJECT`. 
 
 ![](./img/newproject.png)
 
@@ -36,7 +34,7 @@ There are two options, one works for some people and one for the other. So this 
 
 ![](./img/originalDashboard.png)
 
-5. Select your new project in the menu and click open. 
+5. Select your new project in the menu and click open. You should see something like this. If your project isn't listed, just search for it.
 
 ![](./img/switchProjects.png)
 
@@ -64,7 +62,6 @@ There are two options, one works for some people and one for the other. So this 
 
 ![](./img/generateAPI.png)
 
-
 :warning: Copy your API key because you're going to need it soon!
 
 ## Step by Step
@@ -72,6 +69,8 @@ There are two options, one works for some people and one for the other. So this 
 Now that everything's set up, we're going to start adding to our application. Throughout building you can run `yarn start` from **workshop-ws-04-23-maps** to see your changes in real time!
 
 You should see this image! If you do you're all set to go.
+
+:warning: Note we're at localhost:3000. New starter pack, new adddress. :flushed:
 
 ![](./img/startpage.png)
 
@@ -96,17 +95,19 @@ Now we're going to render our Map component. In your render method, under the H1
 </Map>
 ```
 
-google here is a prop of the Map component, 
+google here is a prop of the Map component, **ADD**
+
+:alert: Throughout this tutorial, we'll be passing props to all our components. The components do all the heavy lifting, App.js, as the parent component, just needs to tell them what to do!
 
 Look at that map! :scream: You should have something that looks like this 
 
 ![](./img/basicMap.png)
 
-:alert: If your map is greyed out and giving you an alert saying it can't load, you've got an API problem. Let us know and we can come and help!
+:alert: If your map is greyed out and giving you an alert saying it can't load, you've got an API key problem. Let us know and we can come and help!
 
 Feel free to play with the buttons on the top left corner. They enable you to do things like see the terrain or satelite views. Pretty cool!
 
-Boston's cool but let's center it in Hanover! To your Map component we're going to pass it a prop called `initial center` which will be the latitude and longitude of the center of our map. The latitude and longitude of Dartmouth is: **43.7044, -72.2887**.
+SF's cool but let's center it in Hanover! To your Map component we're going to pass it a prop called `initial center` which will be the latitude and longitude of the center of our map. The latitude and longitude of Dartmouth is: **43.7044, -72.2887**.
 
 Right below `google={this.props.google}` in the `Maps` tag add
 
@@ -129,7 +130,7 @@ We like the zoom set at 16, but feel free to change it.
 
 In this library, Markers and InfoWindows are their own components. To use them, we need to import them! Add `InfoWindow, Marker` to `import { Map, GoogleApiWrapper } from 'google-maps-react';` (the import statement you already have). Let's drop a marker!
 
-Within your Map component, we're going to add a Marker Component, so it'll be the child of `<Map />`. Add the code bellow inbetween the Map tags.
+Within your Map component, we're going to add a `Marker` component, so it'll be the child of `<Map />`. Add the code bellow inbetween the Map tags.
 
 ```javascript
 <Marker
@@ -137,13 +138,21 @@ Within your Map component, we're going to add a Marker Component, so it'll be th
 />
 ```
 
-You should see something like the picture below. The marker will drop automatically in the center of the map, but we can change this later.
+You should see something like the picture below. The marker will drop automatically in the center of the map, but we can change this.
 
 ![](./img/firstMarker.png)
 
+To your `Marker` tag, you can pass the `Marker` component the following: 
+
+```javascript
+position={{lat: YOUR LAT, lng: -YOUR LONG}}
+```
+
+We're going to challenge you to find your own coordinates with the site https://www.latlong.net/. Keep in mind that we're centered at Dartmouth right now!
+
 Now, let's make it clickable with an InfoWindow that'll open up and give us a description of our marker. Let's add an InfoWindow component. This will also be a child of the Map component.
 
-After the Marker component, add 
+After the `Marker` component, add 
 
 ```javascript
 <InfoWindow>
@@ -182,22 +191,22 @@ onMarkerClick = (props, marker, e) =>
 });
 ```
 
-When the marker is clicked, this will change the state and activate the marker: the info window will pop up! You also need to add an onClick handler your Marker component. Add the code below to your Marker tag.
+When the marker is clicked, this will change the state and activate the marker: the info window will pop up! You also need to add an onClick handler your `Marker` component. Add the code below to your Marker tag.
 
 ```javascript
 onClick={this.onMarkerClick}
 ```
 
-Uh oh! It still doesn't do anything when you click it. That's because we don't have an info window. Let's fix that. First let's add some content to our InfoWindow component. We need to connect our InfoWindow to our marker. In order to do this, we pass our InfoWindow component the following:
+Uh oh! It still doesn't do anything when you click it. That's because we don't have an info window. Let's fix that. First let's add some content to our InfoWindow component. We need to connect our InfoWindow to our marker. In order to do this, we pass our `InfoWindow` component the following:
 
 ```javascript
 marker={this.state.activeMarker}
 visible={this.state.showingInfoWindow}
 ```
 
-This gives the InfoWindow component the Active Marker's name and tells it to show up!
+This gives the `InfoWindow` component the active markers name and tells it to show up!
 
-In between the InfoWindow tags, add the code below to give it some content.
+In between the `InfoWindow` tags, add the code below to give it some content.
 
 ```javascript
 <div>
@@ -205,7 +214,7 @@ In between the InfoWindow tags, add the code below to give it some content.
 </div>
 ```
 
-YAY! Let's close it and go home, right? Wait, what did the marker say again? Oh no. We can't reopen the textbox! But, why? Why isn't this working? Well, thank you for asking, young grasshopper. It's because we don't have an on close handler. In the InfoWindow tag, add the following code under the marker and visible variables:
+YAY! Let's close it and go home, right? Wait, what did the marker say again? Oh no. We can't reopen the textbox! But, why? Why isn't this working? Well, thank you for asking, young grasshopper. It's because we don't have an on close handler. In the `InfoWindow` tag, add the following code under the marker and visible variables:
 
 ```javascript
 onClose={this.onClose}
@@ -224,32 +233,31 @@ onClose = props => {
 };
 ```
 
-Woohoo! :dancer: Now you should see something like this and be able to open and close it as many times as you want! Sick
+Woohoo! :dancer: Now you should see something like this and be able to open and close it as many times as you want! Sick. Can you figure out how to change what's inside the Marker? Make it your own!
 
 ![](./img/infoBox.png)
 
 
 ### Adding Data Vizzzz 
 
-Now we have a map with a marker. Heck yah. Let's add a little spicy data to make our map interesting. Before we add a shape, whose edges are the data points we're about to define, we need to get that set of data. This is the one we used, but feel free to go back on the website above, and chose your own points! Just remember, the first and the last point have to be the same, so the shape comes full circle.
+Now we have a map with a marker. Heck yah. Let's add a little spicy data to make our map interesting. Before we add a shape, whose edges are the data points we're about to define, we need to get that set of data. Below is the one we used, but feel free to go to https://www.latlong.net/ and chose your own points! Just remember, the first and the last point have to be the same, so the shape comes full circle.
 
 At the top of your `render` function, add: 
 
-
 ```javascript
 const triangleCoords = [
-    {lat: 43.7046, lng: -72.2943}, //thayer
-    {lat: 43.7034, lng: -72.2886}, //green
-    {lat: 43.7091, lng: -72.2839}, //LSC
-    {lat: 43.7046, lng: -72.2943} //thayer
+    {lat: 43.7046, lng: -72.2943}, 
+    {lat: 43.7034, lng: -72.2886}, 
+    {lat: 43.7091, lng: -72.2839}, 
+    {lat: 43.7046, lng: -72.2943} 
 ];
 ```
 
 Can you see guess points we chose? It's pretty hard so let's actually map them.
 
-In this library, `Polygons`, what we'll use to construct our shapes, is another Component. You know the drill, we have to import it. Add `Polygons` to the list of components you've already imported. 
+In this library, `Polygons` is the component we'll use to construct our shapes. You know the drill, we have to import it. Add `Polygons` to the list of components you've already imported. 
 
-Now let's add our Polygon component. It'll be another child of Map so make sure to put it inbetween the Map tags. We can add it under the InfoWindow tags.
+Now let's add our `Polygon` component. It'll be another child of `Map` so make sure to put it inbetween the `Map` tags. We can add it under the `InfoWindow` tags.
 
 Under InfoWindow add the code: 
 
@@ -275,11 +283,11 @@ You just made your own React App that includes the Google Maps API with some coo
 
 ### LAST PART! Let's deploy! 
 
-Because of our starter, we're going to have to deploy in a bit of a different way. First let's do 
+Because of our starter, we're going to have to deploy in a bit of a different way. You should be in the root directory of your project, **workshop-ws-04-23-maps**. First let's do 
 
 `yarn add surge` 
 
-You should be in the root directory of your project, **workshop-ws-04-23-maps**. Next run
+ Next run
 
 `yarn run build` 
 
@@ -289,7 +297,7 @@ Now, just run `surge`! And you're done!
 
 ### Extra Credit
 
-Can make something more complex than a triangle? Let's add some more points into our data set. Add some more points into `triangleCords`.
+1. Can we make something more complex than a triangle? Let's add some more points into our data set. Add some more points into `triangleCords`.
 
 :alert: Where do you add the code below within the data set? This is a little tricky, but try it out! You may get something very funky. 
 
@@ -299,7 +307,9 @@ Can make something more complex than a triangle? Let's add some more points into
 {lat: 43.7030, lng: -72.2841}, //gym
 ```
 
-Feel free to find the latitutde and longitude of somewhere else and put that in if you want! This website makes it easy to find those values https://www.latlong.net/ Then, you can create your own shape within the new location you chose. 
+2. Feel free to find the latitutde and longitude of somewhere else and put that in if you want! This website makes it easy to find those values https://www.latlong.net/ Then, you can create your own shape within the new location you chose. 
+
+3. Style your map! Change the styling in `Polygon` to make it your own!
 
 ## Summary 
 
@@ -307,10 +317,10 @@ Feel free to find the latitutde and longitude of somewhere else and put that in 
 
 * [ ] A map, that is centered around a certain point and zoomed in to a level you like
 * [ ] At least one marker of a point of your choosing, with a custom info window
-* [ ] Event handlers than enable you to click on your marker and see you infor window
-* [ ] A shape whose points are those you selected in the list above
+* [ ] Event handlers than enable you to click on your marker and see you info window
+* [ ] A shape whose points are those you selected in the list above that is overlayed on the map
 
-**Extra Credit** Your graph centers around somewhere that isn't Dartmouth and/or style your map to make it your own :sunglasses:
+**Extra Credit** A more complicated polygon, your graph centers around somewhere that isn't Dartmouth and/or style your map to make it your own :sunglasses:
 
 **What you learned:**
 
@@ -318,13 +328,12 @@ Feel free to find the latitutde and longitude of somewhere else and put that in 
 * [ ] The pros and cons of the different map API options (Leaflet, Mapbox, Google Maps)
 * [ ] Adding a map to your React app and customizing the location, zoom and pins
 * [ ] Leveraging a data set to produce cool data visualtions with the Google Maps API
-* [ ] Styling your map to be your own!
 
 ## Reflection
 
 :bulb: Remember to submit these on canvas!
 
-* [ ] Explain the basic idea of how these map APIs work.
+* [ ] Explain the basic idea of how these map APIs work. How can we use this with React?
 * [ ] Can you think of any instances where you would use a map API in a web or mobile app? For one of those examples, which API (Leaflet, Mapbox, Google Maps) would you choose and why?
 
 ## Resources
