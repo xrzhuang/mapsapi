@@ -269,11 +269,11 @@ Look at your page! You should see something like this:
 
 ![](./img/triangle.png)
 
-You just made your own React App that includes the Google Maps API with some cool customization and data visualization. 
+You just made your own React App that includes the Google Maps API with some cool customization and data visualization. Okay a triangle's cool but why do we care? This lays the groundwork for doing things like overlaying traffic onto your map, searching for directions and implementing other functionalities of Google Maps that might come in handy when you need them!
 
 ![](https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif)
 
-LAST PART! Let's deploy! 
+### LAST PART! Let's deploy! 
 
 Because of our starter, we're going to have to deploy in a bit of a different way. First let's do 
 
