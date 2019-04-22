@@ -97,13 +97,13 @@ Now we're going to render our Map component. In your render method, under the H1
 
 google here is a prop of the Map component, **ADD**
 
-:alert: Throughout this tutorial, we'll be passing props to all our components. The components do all the heavy lifting, App.js, as the parent component, just needs to tell them what to do!
+:warning: Throughout this tutorial, we'll be passing props to all our components. The components do all the heavy lifting, App.js, as the parent component, just needs to tell them what to do!
 
 Look at that map! :scream: You should have something that looks like this 
 
 ![](./img/basicMap.png)
 
-:alert: If your map is greyed out and giving you an alert saying it can't load, you've got an API key problem. Let us know and we can come and help!
+:warning: If your map is greyed out and giving you an alert saying it can't load, you've got an API key problem. Let us know and we can come and help!
 
 Feel free to play with the buttons on the top left corner. They enable you to do things like see the terrain or satellite views. Pretty cool!
 
@@ -299,7 +299,7 @@ Now, just run `surge`! And you're done!
 
 1. Can we make something more complex than a triangle? Let's add some more points into our data set. Add some more points into `triangleCords`.
 
-:alert: Where do you add the code below within the data set? This is a little tricky, but try it out! You may get something very funky. 
+:warning: Where do you add the code below within the data set? This is a little tricky, but try it out! You may get something very funky. 
 
 ```javascript
 {lat: 43.7074, lng: -72.2911}, //choates
