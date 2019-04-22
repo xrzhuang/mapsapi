@@ -18,21 +18,52 @@ Our Yarn install includes something called **google maps react**. This is a Java
 
 Since we're using the Google Maps JavaScript API, we need to fetch an API key, just like we did for the Youtube API in Short Assignment 4. To do this you should head to http://console.developers.google.com
 
-1. Select **Library** on the lefthand, invisable menu and you should see a screen like this:
+There are two options, one works for some people and one for the other. So this may take two tries. First, try it this way:
+
+1. You should see a screen that looks like the one below. Click on `Personal Website` or whatever the name of you project is in the top bar.
+
+![](./img/originalDashboard.png)
+
+2. After you click that you should see a page that looks like the one down here. You're going to click on `new project`. 
+
+![](./img/newproject.png)
+
+3. Then you'll see something like this. Name your new project and click create!
+
+![](./img/newproj.png)
+
+4. We're almost there! Now you should be redirected back to the first screen, and we're going to click on `Personal Website` or whatever it is for you again.
+
+![](./img/originalDashboard.png)
+
+5. Select your new project in the menu and click open. 
+
+![](./img/switchProjects.png)
+
+6. Almost there we promise! Select **Library** on the lefthand, invisable menu and you should see a screen like this:
 
 ![](./img/library.png)
 
-2. Next, search for "Google Maps JavaScript API" it should look like this and then click on it:
+7. Next, search for "Google Maps JavaScript API" it should look like this and then click on it:
 
 ![](./img/whichAPI.png)
 
-3. Once you've clicked on the "Google Maps JavaScript API" click enable to enable that API
+8. Once you've clicked on the "Google Maps JavaScript API" click enable to enable that API
 
 ![](./img/enable.png)
 
-4. You'll be taken to a screen that looks something like this. Because we all have google projects from SA 4, we don't need to make a new one. Click on **Credentials** and your API key should be listed! 
+9. You'll be taken to a screen that looks something like this. Click on **Credentials**
 
 ![](./img/getCredential.png)
+
+10. If you see something like the screen below, click `Create Credentials`
+
+![](./img/createCredentials.png)
+
+11. Last step! Select **API Key** from this menu and there you have it! 
+
+![](./img/generateAPI.png)
+
 
 :warning: Copy your API key because you're going to need it soon!
 
@@ -70,6 +101,8 @@ google here is a prop of the Map component,
 Look at that map! :scream: You should have something that looks like this 
 
 ![](./img/basicMap.png)
+
+:alert: If your map is greyed out and giving you an alert saying it can't load, you've got an API problem. Let us know and we can come and help!
 
 Feel free to play with the buttons on the top left corner. They enable you to do things like see the terrain or satelite views. Pretty cool!
 
