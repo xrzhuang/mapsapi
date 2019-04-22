@@ -2,7 +2,7 @@
 
 ![](https://media.giphy.com/media/d2jjuAZzDSVLZ5kI/giphy.gif)
 
-Maps are everywhere :rainbow: We'd be lost without the maps on our phone, and apps from Uber to Snapchat wouldn't work without the capabilities of these APIs. Map APIs give us data we couldn't get otherwise like routing and time estimation, and gives us the tools to produce cool data visualizations and construct augmented reality. The best part is, it's pretty easy for us to take advantage of all their cool features too :smiley_cat:
+Maps are everywhere :rainbow: We'd be lost without the maps on our phone, and apps from Uber to Snapchat wouldn't work without the capabilities of these APIs. Map APIs give us data we couldn't get otherwise like routing and time estimation and gives us the tools to produce cool data visualizations and construct augmented reality. The best part is, it's pretty easy for us to take advantage of all their cool features too :smiley_cat:
 
 ## Overview
 
@@ -12,13 +12,13 @@ For this demo, we're going to be writing a react app that utilizes the Google Ma
 
 Clone the workshop repository and `cd workshop-ws-04-23-maps`. Then run `yarn install` (this may take a second). We need to install all the dependencies from the package.json file. Then run `yarn start` to make sure everything's looking good :sunglasses: 
 
-:rocket: We're using a different "starter-pack." This one is called **create react app** and it's used by front end developers to quickly create a complete react development environemnt. Though our starter pack is great, this one has a few more things we're going to need.
+:rocket: We're using a different "starter-pack." This one is called **create react app** and it's used by front end developers to quickly create a complete react development environment. Though our starter pack is great, this one has a few more things we're going to need.
 
-Our Yarn install includes something called **google maps react**. This is a JavaScript library that uses the Google Maps API and it makes it compatable with react projects. 
+Our Yarn install includes something called **google maps react**. This is a JavaScript library that uses the Google Maps API and it makes it compatible with react projects. 
 
 Since we're using the Google Maps JavaScript API, we need to fetch an API key, just like we did for the Youtube API in Short Assignment 4. To do this you should head to http://console.developers.google.com
 
-1. You should see a screen that looks like the one below. Click on `Personal Website` or whatever the name of you project is in the top bar.
+1. You should see a screen that looks like the one below. Click on `Personal Website` or whatever the name of your project is in the top bar.
 
 ![](./img/originalDashboard.png)
 
@@ -38,7 +38,7 @@ Since we're using the Google Maps JavaScript API, we need to fetch an API key, j
 
 ![](./img/switchProjects.png)
 
-6. Almost there we promise! Select **Library** on the lefthand, invisable menu and you should see a screen like this:
+6. Almost there we promise! Select **Library** on the left hand, invisible menu and you should see a screen like this:
 
 ![](./img/library.png)
 
@@ -105,9 +105,9 @@ Look at that map! :scream: You should have something that looks like this
 
 :alert: If your map is greyed out and giving you an alert saying it can't load, you've got an API key problem. Let us know and we can come and help!
 
-Feel free to play with the buttons on the top left corner. They enable you to do things like see the terrain or satelite views. Pretty cool!
+Feel free to play with the buttons on the top left corner. They enable you to do things like see the terrain or satellite views. Pretty cool!
 
-SF's cool but let's center it in Hanover! To your Map component we're going to pass it a prop called `initial center` which will be the latitude and longitude of the center of our map. The latitude and longitude of Dartmouth is: **43.7044, -72.2887**.
+SF's cool but let's center it in Hanover! To your Map component we're going to pass it a prop called `initial center` which will be the latitude and longitude of the center of our map. The latitude and longitude of Dartmouth are: **43.7044, -72.2887**.
 
 Right below `google={this.props.google}` in the `Maps` tag add
 
@@ -130,7 +130,7 @@ We like the zoom set at 16, but feel free to change it.
 
 In this library, Markers and InfoWindows are their own components. To use them, we need to import them! Add `InfoWindow, Marker` to `import { Map, GoogleApiWrapper } from 'google-maps-react';` (the import statement you already have). Let's drop a marker!
 
-Within your Map component, we're going to add a `Marker` component, so it'll be the child of `<Map />`. Add the code bellow inbetween the Map tags.
+Within your Map component, we're going to add a `Marker` component, so it'll be the child of `<Map />`. Add the code bellow between the Map tags.
 
 ```javascript
 <Marker
@@ -214,7 +214,7 @@ In between the `InfoWindow` tags, add the code below to give it some content.
 </div>
 ```
 
-YAY! Let's close it and go home, right? Wait, what did the marker say again? Oh no. We can't reopen the textbox! But, why? Why isn't this working? Well, thank you for asking, young grasshopper. It's because we don't have an on close handler. In the `InfoWindow` tag, add the following code under the marker and visible variables:
+YAY! Let's close it and go home, right? Wait, what did the marker say again? Oh no. We can't reopen the textbox! But, why? Why isn't this working? Well, thank you for asking, young grasshopper. It's because we don't have an `onClose handler`. In the `InfoWindow` tag, add the following code under the marker and visible variables:
 
 ```javascript
 onClose={this.onClose}
@@ -257,7 +257,7 @@ Can you see guess points we chose? It's pretty hard so let's actually map them.
 
 In this library, `Polygons` is the component we'll use to construct our shapes. You know the drill, we have to import it. Add `Polygons` to the list of components you've already imported. 
 
-Now let's add our `Polygon` component. It'll be another child of `Map` so make sure to put it inbetween the `Map` tags. We can add it under the `InfoWindow` tags.
+Now let's add our `Polygon` component. It'll be another child of `Map` so make sure to put it between the `Map` tags. We can add it under the `InfoWindow` tags.
 
 Under InfoWindow add the code: 
 
@@ -307,7 +307,7 @@ Now, just run `surge`! And you're done!
 {lat: 43.7030, lng: -72.2841}, //gym
 ```
 
-2. Feel free to find the latitutde and longitude of somewhere else and put that in if you want! This website makes it easy to find those values https://www.latlong.net/ Then, you can create your own shape within the new location you chose. 
+2. Feel free to find the latitude and longitude of somewhere else and put that in if you want! This website makes it easy to find those values https://www.latlong.net/ Then, you can create your own shape within the new location you chose. 
 
 3. Style your map! Change the styling in `Polygon` to make it your own!
 
@@ -317,7 +317,7 @@ Now, just run `surge`! And you're done!
 
 * [ ] A map, that is centered around a certain point and zoomed in to a level you like
 * [ ] At least one marker of a point of your choosing, with a custom info window
-* [ ] Event handlers than enable you to click on your marker and see you info window
+* [ ] Event handlers that enable you to click on your marker and see you info window
 * [ ] A shape whose points are those you selected in the list above that is overlayed on the map
 
 **Extra Credit** A more complicated polygon, your graph centers around somewhere that isn't Dartmouth and/or style your map to make it your own :sunglasses:
@@ -327,7 +327,7 @@ Now, just run `surge`! And you're done!
 * [ ] What an API is and what map APIs are capable of
 * [ ] The pros and cons of the different map API options (Leaflet, Mapbox, Google Maps)
 * [ ] Adding a map to your React app and customizing the location, zoom and pins
-* [ ] Leveraging a data set to produce cool data visualtions with the Google Maps API
+* [ ] Leveraging a data set to produce cool data visualizations with the Google Maps API
 
 ## Reflection
 
@@ -346,6 +346,6 @@ Now, just run `surge`! And you're done!
 * https://www.mapbox.com/
 * https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/#the-map-container-component
 
-## Link to our Power Point
+## Link to our PowerPoint
 
 https://docs.google.com/presentation/d/1kFYbvW4CdcYt7os8FXeKOqM1Vs_y9IbsqyPxfru8Y6E/edit?usp=sharing
