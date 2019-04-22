@@ -75,7 +75,7 @@ Feel free to play with the buttons on the top left corner. They enable you to do
 
 Boston's cool but let's center it in Hanover! To your Map component we're going to pass it a prop called `initial center` which will be the latitude and longitude of the center of our map. The latitude and longitude of Dartmouth is: **43.7044, -72.2887**.
 
-Right below `google={this.props.google}` add
+Right below `google={this.props.google}` in the `Maps` tag add
 
 ```javascript
 initialCenter={{
@@ -84,7 +84,7 @@ initialCenter={{
 }}
 ```
 
-Now your map should be centered where you wanted. Next, we're going to adjust the zoom to cover all the area you want to see. Right below `initial center={{...}}` add
+Now your map should be centered where you wanted. Next, we're going to adjust the zoom to cover all the area you want to see. Right below `initial center={{...}}` in the `Maps` tag add
 
 ```javascript
 zoom={16}
@@ -155,17 +155,6 @@ When the marker is clicked, this will change the state and activate the marker: 
 onClick={this.onMarkerClick}
 ```
 
-We also need to define the onMarkerClick function for it to work *duh*. Insert this function below the constructor:
-
-```javascript
-onMarkerClick = (props, marker, e) =>
-  this.setState({
-    selectedPlace: props,
-    activeMarker: marker,
-    showingInfoWindow: true
-});
-```
-
 Uh oh! It still doesn't do anything when you click it. That's because we don't have an info window. Let's fix that. First let's add some content to our InfoWindow component. We need to connect our InfoWindow to our marker. In order to do this, we pass our InfoWindow component the following:
 
 ```javascript
@@ -227,7 +216,7 @@ Can you see guess points we chose? It's pretty hard so let's actually map them.
 
 In this library, `Polygons`, what we'll use to construct our shapes, is another Component. You know the drill, we have to import it. Add `Polygons` to the list of components you've already imported. 
 
-Now let's add our Polygon component. It'll be another child of Map, so make sure to put it inbetween the Map tags. 
+Now let's add our Polygon component. It'll be another child of Map so make sure to put it inbetween the Map tags. We can add it under the InfoWindow tags.
 
 Under InfoWindow add the code: 
 
