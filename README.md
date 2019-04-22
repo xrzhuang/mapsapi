@@ -145,7 +145,7 @@ You should see something like the picture below. The marker will drop automatica
 To your `Marker` tag, you can pass the `Marker` component the following: 
 
 ```javascript
-position={{lat: YOUR LAT, lng: -YOUR LONG}}
+position={{lat: YOUR LAT, lng: YOUR LONG}}
 ```
 
 We're going to challenge you to find your own coordinates with the site https://www.latlong.net/. Keep in mind that we're centered at Dartmouth right now!
