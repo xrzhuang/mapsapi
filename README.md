@@ -235,10 +235,11 @@ onClose = props => {
 };
 ```
 
-Woohoo! :dancer: Now you should see something like this and be able to open and close it as many times as you want! Sick. Can you figure out how to change what's inside the Marker? Make it your own!
+Woohoo! :dancer: Now you should see something like this and be able to open and close it as many times as you want! Sick. Can you figure out how to change what's inside the Marker? Make it your own! 
 
 ![](./img/infoBox.png)
 
+Try adding in another marker within the bounds of your map with your own latitude and longitude (again using https://www.latlong.net/)!
 
 ### Adding Data Vizzzz 
 
