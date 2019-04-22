@@ -66,17 +66,19 @@ Since we're using the Google Maps JavaScript API, we need to fetch an API key, j
 
 ## Step by Step
 
+### Rendering the Map Component
+
+Time to start coding! `cd src` and open up `App.js`. This is the main component we will be working with and editing. To start, let's add your API key. Insert your copied key where it says `ENTER_YOUR_API_KEY_HERE`. This way, you can get access to everything Google Maps has to offer. 
+
 Now that everything's set up, we're going to start adding to our application. Throughout building you can run `yarn start` from **workshop-ws-04-23-maps** to see your changes in real time!
 
-You should see this image! If you do you're all set to go.
+After running `yarn start` in terminal you should see this image! If you do you're all set to go.
 
 :warning: Note we're at localhost:3000. New starter pack, new adddress. :flushed:
 
 ![](./img/startpage.png)
 
-### Rendering the Map Component
-
-Time to start coding! `cd src` and open up `App.js`. This is the main component we will be working with and editing. To start, let's add your API key. Insert your copied key where it says `ENTER_YOUR_API_KEY_HERE`. This way, you can get access to everything Google Maps has to offer. If you reload here, you won't see any changes. That's okay because we haven't added a map yet! 
+Where's the map?! It's coming just be patient :grin:
 
 :exclamation: You might have noticed that linting isn't turned on! This is because we have turned off linting in our special starter pack. I know you miss it but it should be fine for this demo.
 
