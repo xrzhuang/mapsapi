@@ -73,7 +73,7 @@ Now that everything's set up, we're going to start adding to our application. Th
 
 You should see this image! If you do you're all set to go.
 
-![](./img/startPage.png)
+![](./img/startpage.png)
 
 ### Rendering the Map Component
 
