@@ -299,7 +299,7 @@ Now, just run `surge`! And you're done!
 
 1. Can we make something more complex than a triangle? Let's add some more points into our data set. Add some more points into `triangleCords`.
 
-:warning: Where do you add the code below within the data set? This is a little tricky, but try it out! You may get something very funky. 
+:warning: Where do you add the code below within the data set? This is a little tricky, but try it out! You may get something very funky. (Hint: To fix this, you may need to figure out how `triangleCords` works with the order of your coordinates)
 
 ```javascript
 {lat: 43.7074, lng: -72.2911}, //choates
