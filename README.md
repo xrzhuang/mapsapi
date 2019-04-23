@@ -70,6 +70,12 @@ Since we're using the Google Maps JavaScript API, we need to fetch an API key, j
 
 Time to start coding! `cd src` and open up `App.js`. This is the main component we will be working with and editing. To start, let's add your API key. Insert your copied key where it says `ENTER_YOUR_API_KEY_HERE`. This way, you can get access to everything Google Maps has to offer. 
 
+Let's start out by getting a basic Google Map to load on the screen, and then we'll start adding features. **google react maps** already has a component called Map that we'll be using to load our map. We need to import the Map component from **google react maps**. At the top of your App.js add:
+
+```javascript
+import { Map, GoogleApiWrapper } from 'google-maps-react';
+```
+
 Now that everything's set up, we're going to start adding to our application. Throughout building you can run `yarn start` from **workshop-ws-04-23-maps** to see your changes in real time!
 
 After running `yarn start` in terminal you should see this image! If you do you're all set to go.
@@ -81,12 +87,6 @@ After running `yarn start` in terminal you should see this image! If you do you'
 Where's the map?! It's coming just be patient :grin:
 
 :exclamation: You might have noticed that linting isn't turned on! This is because we have turned off linting in our special starter pack. I know you miss it but it should be fine for this demo.
-
-Let's start out by getting a basic Google Map to load on the screen, and then we'll start adding features. **google react maps** already has a component called Map that we'll be using to load our map. We need to import the Map component from **google react maps**. At the top of your App.js add:
-
-```javascript
-import { Map, GoogleApiWrapper } from 'google-maps-react';
-```
 
 Now we're going to render our Map component. In your render method, under the H1 tag, add:
 
