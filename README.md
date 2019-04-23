@@ -320,8 +320,8 @@ Now, just run `surge`! And you're done!
 
 * [ ] A map, that is centered around a certain point and zoomed in to a level you like
 * [ ] At least one marker of a point of your choosing, with a custom info window
-* [ ] Event handlers that enable you to click on your marker and see you info window
-* [ ] A shape whose points are those you selected in the list above that is overlayed on the map
+* [ ] Event handlers that enable you to click on your marker and see your info window
+* [ ] A shape whose points are those you selected that is overlayed on the map
 
 **Extra Credit** A more complicated polygon, your graph centers around somewhere that isn't Dartmouth and/or style your map to make it your own :sunglasses:
 
@@ -329,14 +329,14 @@ Now, just run `surge`! And you're done!
 
 * [ ] What an API is and what map APIs are capable of
 * [ ] The pros and cons of the different map API options (Leaflet, Mapbox, Google Maps)
-* [ ] Adding a map to your React app and customizing the location, zoom and pins
+* [ ] Adding a map to your React app and customizing the location, zoom and markers
 * [ ] Leveraging a data set to produce cool data visualizations with the Google Maps API
 
 ## Reflection
 
 :bulb: Remember to submit these on canvas!
 
-* [ ] Explain the basic idea of how these map APIs work. How can we use this with React?
+* [ ] Why are we using google react maps instead of the original library written by Google? What are the benefits?
 * [ ] Can you think of any instances where you would use a map API in a web or mobile app? For one of those examples, which API (Leaflet, Mapbox, Google Maps) would you choose and why?
 
 ## Resources
