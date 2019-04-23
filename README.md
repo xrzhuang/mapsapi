@@ -97,7 +97,7 @@ Now we're going to render our Map component. In your render method, under the H1
 </Map>
 ```
 
-google here is a prop of the Map component, **ADD**
+Wait where is `this.props.google` coming from? `GoogleApiWrapper` is a Higher Order Component which comes from the **google react maps** library. At the end of App.js, we pass our class `MapContainer` into `GoogleApiWrapper`. `GoogleApiWrapper` does some magic (i.e. abstracts out a lot of work) with our `MapContainer` and along the way, will pass it a prop called google.
 
 :warning: Throughout this tutorial, we'll be passing props to all our components. The components do all the heavy lifting, App.js, as the parent component, just needs to tell them what to do!
 
