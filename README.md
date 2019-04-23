@@ -10,7 +10,7 @@ For this demo, we're going to be writing a react app that utilizes the Google Ma
 
 ## Setup
 
-Clone the workshop repository and `cd workshop-ws-04-23-maps`. Then run `yarn install` (this may take a second). We need to install all the dependencies from the package.json file. Then run `yarn start` to make sure everything's looking good :sunglasses: 
+Clone the workshop repository and `cd workshop-ws-04-23-maps`. Then run `yarn install` (this may take a second). We need to install all the dependencies from the package.json file. 
 
 :rocket: We're using a different "starter-pack." This one is called **create react app** and it's used by front end developers to quickly create a complete react development environment. Though our starter pack is great, this one has a few more things we're going to need.
 
