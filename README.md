@@ -345,6 +345,9 @@ Now, just run `surge`! And you're done!
 * https://leafletjs.com/
 * https://www.mapbox.com/
 * https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/#the-map-container-component
+* https://medium.freecodecamp.org/what-is-an-api-in-english-please-b880a3214a82
+* https://scotch.io/tutorials/react-apps-with-the-google-maps-api-and-google-maps-react
+
 
 ## Link to our PowerPoint
 
